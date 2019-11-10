@@ -15,6 +15,7 @@ export class JsonplaceholderService {
   }
 
   getPost(id: number) {
-    return this.httpClient.get<Post>(`${this.baseURL}/${id}`)
+    const postUrl = `${this.baseURL}/${id}`
+    return this.httpClient.get<Post>(postUrl)
   }
 }

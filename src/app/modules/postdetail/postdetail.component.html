@@ -1,3 +1,9 @@
-<p>
-  postdetail works!
-</p>
+<ng-container *ngIf="postdetail$ | async; let postdetail">
+  <div class="container">
+    <h1 class="mt-4">{{postdetail.title}}</h1>
+    <hr>
+    <p>{{postdetail.body}}</p>
+    <button routerLink='/' >Ver todos los posts</button>
+  </div>  
+
+</ng-container>

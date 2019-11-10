@@ -12,15 +12,14 @@ export class PostdetailComponent implements OnInit {
    * Variable to keep the reference of the observable returned by
    * the service
    */
-  postdetail: any
+  postdetail$: any
 
 
   constructor(private route: ActivatedRoute, private jsonplaceholderService: JsonplaceholderService) { }
 
   ngOnInit() {
     const postId = Number(this.route.snapshot.paramMap.get('id'))
-    console.log(postId)
-    this.postdetail = this.jsonplaceholderService.getPost(postId)
+    this.postdetail$ = this.jsonplaceholderService.getPost(postId)
   }
 
 }
