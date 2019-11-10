@@ -6,6 +6,10 @@ const routes: Routes = [
     path: '',
     loadChildren: './modules/posts/posts.module#PostsModule'
   },
+  {
+    path: 'post',
+    loadChildren: './modules/postdetail/postdetail.module#PostdetailModule'
+  }
 ];
 
 @NgModule({
