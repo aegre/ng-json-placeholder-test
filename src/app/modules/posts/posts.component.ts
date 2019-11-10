@@ -3,11 +3,11 @@ import { JsonplaceholderService } from 'src/app/services/jsonplaceholder.service
 import { Post } from 'src/app/models/post.model';
 
 @Component({
-  selector: 'app-postlist',
-  templateUrl: './postlist.component.html',
-  styleUrls: ['./postlist.component.css']
+  selector: 'app-posts',
+  templateUrl: './posts.component.html',
+  styleUrls: ['./posts.component.css']
 })
-export class PostlistComponent implements OnInit {
+export class PostsComponent implements OnInit {
   posts: Post[]
 
   constructor(private jsonService: JsonplaceholderService) {
