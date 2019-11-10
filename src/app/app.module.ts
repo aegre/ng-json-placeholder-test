@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostlistComponent } from './components/postlist/postlist.component';
 import { PostdetailComponent } from './components/postdetail/postdetail.component';
+import { JsonplaceholderService } from './services/jsonplaceholder.service';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,10 @@ import { PostdetailComponent } from './components/postdetail/postdetail.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [JsonplaceholderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
