@@ -8,16 +8,17 @@ import { Post } from 'src/app/models/post.model';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  posts: Post[]
 
-  constructor(private jsonService: JsonplaceholderService) {
-    this.posts = []
-   }
+  /**
+   * Variable to keep the reference of the observable returned by
+   * the service
+   */
+  posts: any
+
+  constructor(private jsonService: JsonplaceholderService) {}
 
   ngOnInit() {
-    this.jsonService.getPosts().subscribe(
-      data => this.posts = data
-    )
+    this.posts = this.jsonService.getPosts()
   }
 
 }
