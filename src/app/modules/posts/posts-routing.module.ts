@@ -5,6 +5,9 @@ import { PostsComponent } from './posts.component';
 const routes: Routes = [{
   path: '',
   component: PostsComponent
+}, {
+  path: 'search/:search',
+  component: PostsComponent,
 }];
 
 @NgModule({

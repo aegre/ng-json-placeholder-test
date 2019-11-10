@@ -1,4 +1,8 @@
 <div class="container" >
+  <h1>Posts:</h1>
+  <form (submit)="onSearch(event)" >
+    <input ng-model #search class="form-control mt-4 mb-2" type="buscar" name='Search' placeholder="Search" aria-label="Search">
+  </form>
   <div class="row">
     <div class='col-4' *ngFor="let post of (posts | async)">
       <div class="card mb-2 mt-2">

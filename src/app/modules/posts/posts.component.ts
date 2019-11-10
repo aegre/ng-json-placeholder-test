@@ -15,10 +15,16 @@ export class PostsComponent implements OnInit {
    */
   posts: any
 
+  search = 'da'
+
   constructor(private jsonService: JsonplaceholderService) {}
 
   ngOnInit() {
     this.posts = this.jsonService.getPosts()
+  }
+
+  onSearch() {
+    console.log(this.search)
   }
 
 }
